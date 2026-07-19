@@ -1,11 +1,8 @@
-<p align='center'>
-<img src='repoAssets/img.jpg'>
-</p>
-<h1 align="center" > BioInformatics Course  </h1>
-<h3 align="center">
-@ Faculty of computer and information Sciences ' MU '  for the '4th Year' IT Department
-</h3>
+# BioInformatics-SandBox
 
-<h4 align="center">
-Tip: First Week was an Introduction to Bio
-</h4>
+Bio Informatics Lecture Notes @ Faculty of computer and information Sciences ' MU '  for the '4th Year' IT Department
+
+**Topics:** `needleman-wunsch-algorithm`, `pairwise-alignment`, `smith-waterman-algorithm`, `multiple-sequence-alignment`, `sumofpairs`, `star-algorithm`
+
+---
+↩ Part of the [**university**](../) collection · [all collections](https://github.com/fadyehabamer?tab=repositories) · [@fadyehabamer](https://github.com/fadyehabamer)
