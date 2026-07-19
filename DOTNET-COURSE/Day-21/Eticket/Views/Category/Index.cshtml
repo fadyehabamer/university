@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Eticket.Models.Category>
+<!-- =============== START OF PAGE HEADER =============== -->
+<section class="page-header overlay-gradient" style="background: url(assets/images/posters/movie-collection.jpg);">
+    <div class="container">
+        <div class="inner">
+            <h2 class="title">Catrgories </h2>
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li>Catrgories List</li>
+            </ol>
+        </div>
+    </div>
+</section>
+<!-- =============== END OF PAGE HEADER =============== -->
+<!-- =============== START OF MAIN =============== -->
+<main class="ptb100">
+    <div class="container">
+
+        <!-- Start of Celebrities List -->
+        <div class="row">
+            @foreach (var category in Model)
+            {
+                <!-- Celebrity List Item -->
+                <div class="col-md-12 col-sm-12">
+                    <div class="celebrity-list-1">
+                    <div class="celeb-container">
+
+                        <!-- Celebrity Image -->
+                        <div class="celebrity-image">
+                                <a href="/category/details/@category.Id">
+                                <img src="~/images/other/touchkit.jpg" alt="" style="height:100%">
+                            </a>
+                        </div>
+
+                        <!-- Celebrity Content -->
+                        <div class="celebrity-content">
+                            <div class="inner">
+                                    <h3 class="title">
+                                        <a href="/category/details/@category.Id">
+                                    @category.Name
+                                </a></h3>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            }
+
+           
+        </div>
+        <!-- End of Celebrities List -->
+
+    </div>
+</main>
+<!-- =============== END OF MAIN =============== -->

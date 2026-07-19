@@ -1,0 +1,135 @@
+﻿@model WebApplication2.Models.Appointment
+
+<!-- ==========Page Header Section Start Here========== -->
+<section class="page-header-section service-title style-1"
+         style="background-image: url('@Url.Content("~/images/pageheader/pageheader.jpg")')">
+    <div class="page-header-content">
+        <div class="container">
+            <div class="page-header-content-inner">
+                <div class="page-title">
+                    <h2>Contact Information</h2>
+                </div>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Edit Doctor</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==========Page Header Section Ends Here========== -->
+<!-- ==========Contact Section Start Here========== -->
+<section class="contact-us padding-tb">
+    <div class="container">
+        <div class="section-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <div class="here-form">
+                        <h3>Add New Doctor</h3>
+
+                        <form asp-action=
+                        "EditDoctor"
+                              method="post">
+                            <input type="hidden" asp-for="DoctorId" />
+                            <div class="mb-3">
+                                <label for="Name" class="form-label"> Doctor New Name </label>
+                                <input type="text" class="form-control" name="Name">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="Specialization" class="form-label"> New Specialization </label>
+                                <input type="text" class="form-control" name="Specialization">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="Phone" class="form-label">New Phone </label>
+                                <input type="text" class="form-control" name="Phone">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="Email" class="form-label"> New Email </label>
+                                <input type="text" class="form-control" name="Email">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="Address" class="form-label">New Address </label>
+                                <input type="text" class="form-control" name="Address">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="Address" class="form-label">New Image </label>
+                                <input type="text" class="form-control" name="image">
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="desc" 
+                                    value=""
+                                    class="form-label">New Description</label>
+                                <textarea class="form-control" id="" rows="3" name="Details"></textarea>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary">Submit New Data</button>
+                        </form>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==========Contact Section Ends Here========== -->
+<!-- ==========Map Section Start Here========== -->
+<div class="map-section">
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.227736753981!2d90.38698831452395!3d23.739256984594892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c740f17d1%3A0xdd3daab8c90eb11f!2sLabArtisan!5e0!3m2!1sen!2sbd!4v1613220503501!5m2!1sen!2sbd"
+                allowfullscreen="" aria-hidden="false" tabindex="0" id="g-map"></iframe>
+    </div>
+</div>
+<!-- ==========Map Section Ends Here========== -->
+<!-- ==========Sponsor Section Start Here========== -->
+<div class="sponsor-section">
+    <div class="container">
+        <div class="sponsor-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/1.png" alt="sponso-img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/2.png" alt="sponso-img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/3.png" alt="sponso-img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/4.png" alt="sponso-img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/5.png" alt="sponso-img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/6.png" alt="sponso-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ==========Sponsor Section Ends Here========== -->

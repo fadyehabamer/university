@@ -1,0 +1,21 @@
+﻿@{
+    <div class="card-group">
+	    @{
+            foreach (var item in Model)
+            {
+                <div class="card">
+                    <img src="~/images/@item.Img" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="/product/GetProductByName?name=@item.Name">@item.Name</a>
+                        </h5>
+                        <p class="card-text">@item.Description</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">@item.Price</small>
+                    </div>
+                </div>
+            }
+         }
+    </div>
+}

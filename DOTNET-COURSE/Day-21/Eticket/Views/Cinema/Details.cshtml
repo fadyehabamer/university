@@ -1,0 +1,188 @@
+﻿<style>
+    .movie-detail-intro{
+        min-height:20rem;
+    }
+</style>
+   <!-- =============== START OF MOVIE DETAIL INTRO =============== -->
+<section class="movie-detail-intro overlay-gradient ptb100" style="background: url(~/images/other/movie-detail-bg.jpg);">
+    <div class="container">
+
+        <div class="movie-details">
+            <h3 class="title">
+                @Model.Name
+            </h3>
+           
+
+            <div class="rating mt10">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <span>296 Ratings</span>
+            </div>
+        </div>
+
+        <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
+            <i class="fa fa-play"></i>
+        </a>
+
+    </div>
+</section>
+<!-- =============== END OF MOVIE DETAIL INTRO =============== -->
+<!-- =============== START OF MOVIE DETAIL MAIN SECTION =============== -->
+<section class="movie-detail-main ptb100">
+    <div class="container">
+
+        <div class="row">
+            <!-- Start of Movie Main -->
+            <div class="col-12">
+                <div class="inner pr50">
+
+                    <!-- Storyline -->
+                    <div class="storyline">
+                        <h3 class="title">Storyline</h3>
+
+                        <p>
+                            @Model.Description
+                        </p>
+                    </div>
+
+                    <!-- Media -->
+                    <div class="movie-media mt50">
+                        <h3 class="title"> Photos & Videos</h3>
+
+                        <ul class="image-gallery isotope">
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-1.jpg">
+                                    <img src="~/images/blog/bloglist-1.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-2.jpg">
+                                    <img src="~/images/blog/bloglist-2.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/other/home2-bg.jpg">
+                                    <img src="~/images/other/home2-bg.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-2.jpg">
+                                    <img src="~/images/blog/bloglist-2.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-1.jpg">
+                                    <img src="~/images/blog/bloglist-1.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-3.jpg">
+                                    <img src="~/images/blog/bloglist-3.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-1.jpg">
+                                    <img src="~/images/blog/bloglist-1.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/other/landscape.jpg">
+                                    <img src="~/images/other/landscape.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/other/home2-bg.jpg">
+                                    <img src="~/images/other/home2-bg.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- End of Movie Main -->
+            
+        </div>
+
+    </div>
+</section>
+<!-- =============== END OF MOVIE DETAIL MAIN SECTION =============== -->
+<!-- =============== START OF RECOMMENDED MOVIES SECTION =============== -->
+<section class="recommended-movies bg-light ptb100">
+    <div class="container">
+
+        <!-- Start of row -->
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <h2 class="title">Movies Offerd By @Model.Name Cinema</h2>
+            </div>
+        </div>
+        <!-- End of row -->
+        <!-- Start of Latest Movies Slider -->
+        <div class="owl-carousel recommended-slider mt20">
+
+            @foreach (var movie in Model.Movies)
+            {
+                <!-- === Start of Sliding Item 1 === -->
+                <div class="item">
+                    <!-- Start of Movie Box -->
+                    <div class="movie-box-1">
+
+                        <!-- Start of Poster -->
+                        <div class="poster">
+                            <img src="~/images/movies/@movie.ImageUrl" alt="">
+                        </div>
+                        <!-- End of Poster -->
+                        <!-- Start of Buttons -->
+                        <div class="buttons">
+                            <a href="@movie.TrailerUrl" class="play-video">
+                                <i class="fa fa-play"></i>
+                            </a>
+                        </div>
+                        <!-- End of Buttons -->
+                        <!-- Start of Movie Details -->
+                        <div class="movie-details">
+                            <h4 class="movie-title">
+                                <a href="/movie/details/@movie.Id">@movie.Name</a>
+                            </h4>
+                            <span class="released">@movie.StartDate</span>
+                        </div>
+                        <!-- End of Movie Details -->
+                        <!-- Start of Rating -->
+                        <div class="stars">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                            <span>8.7 / 10</span>
+                        </div>
+                        <!-- End of Rating -->
+
+                    </div>
+                    <!-- End of Movie Box -->
+                </div>
+                <!-- === End of Sliding Item 1 === -->
+            }
+            
+
+        </div>
+        <!-- End of Latest Movies Slider -->
+
+    </div>
+</section>
+<!-- =============== END OF RECOMMENDED MOVIES SECTION =============== -->

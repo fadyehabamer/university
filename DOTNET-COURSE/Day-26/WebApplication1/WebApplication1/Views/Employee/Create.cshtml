@@ -1,0 +1,121 @@
+﻿@model WebApplication1.ViewModels.EmployeeVM
+
+
+
+
+<form action="/employee/Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label for="Name" class="form-label">Employee Name *</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Phone" class="form-label">Employee Phone *</label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Email" class="form-label">Employee Email *</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Address" class="form-label">Employee Address *</label>
+        <input asp-for="Address" class="form-control" />
+        <div class="form-text">Address is required and choose from Cairo, Alexandria, Mansoura</div>
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="DepartmentId" class="form-label">Department *</label>
+        <select asp-for="DepartmentId" class="form-select">
+          @*   <option value="" disabled selected>-- Select Department --</option>
+            <option value="1">HR</option>
+            <option value="2">IT</option>
+            <option value="3">Finance</option>
+            <option value="4">Marketing</option>
+            <option value="5">Sales</option>
+            <option value="6">Production</option>
+            <option value="7">Quality</option> *@
+            
+            @* explicit Cast to List<Department> to avoid error *@
+            @foreach (var item in (List<Department>)ViewData["Departments"])
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+
+           @* 
+               Replace viewdata with viewbag
+               @foreach (var item in (List<Department>)ViewBag.Departments)
+           *@
+
+        </select> 
+        <span asp-validation-for="DepartmentId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function () {
+           
+            $("form").validate({
+                rules: {
+                    Name: {
+                        required: true,
+                        pattern: "^[a-zA-Z ]+$"
+                    },
+                    Phone: {
+                        required: true,
+                        pattern: "^(010|011|012|015)[0-9]{8}$"
+
+                    },
+                    Email: {
+                        required: true,
+                        email: true
+                    },
+                    Address: {
+                        required: true,
+                        pattern: "Cairo|Alexandria|Mansoura"
+                    },
+                    DepartmentId: {
+                        required: true,
+                        range: [1, 7]
+                    }
+                },
+                messages: {
+                    Name: {
+                        required: "Please enter the employee's name"
+                    },
+                    Phone: {
+                        required: "Please enter the employee's phone number",
+                        phoneUS: "Please enter a valid phone number" 
+                    },
+                    Email: {
+                        required: "Please enter the employee's email",
+                        email: "Please enter a valid email address"
+                    },
+                    Address: {
+                        required: "Please enter the employee's address",
+                        pattern: "Address must be Cairo, Alexandria, or Mansoura"
+                    },
+                    DepartmentId: {
+                        required: "Please select a department",
+                        range: "Please select a valid department"
+                    }
+                }
+            });
+
+        });
+    </script>
+}

@@ -1,0 +1,254 @@
+﻿@model Eticket.ViewModels.MovieDetailsVM
+
+<!-- =============== START OF MOVIE DETAIL INTRO =============== -->
+<section class="movie-detail-intro overlay-gradient ptb100" style="background: url(~/images/other/movie-detail-bg.jpg); min-height:22rem;">
+</section>
+<!-- =============== END OF MOVIE DETAIL INTRO =============== -->
+<!-- =============== START OF MOVIE DETAIL INTRO 2 =============== -->
+<section class="movie-detail-intro2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="movie-poster" style="max-width:18rem">
+                    <img src="~/images/movies/@Model.Movie.ImageUrl" alt="">
+
+                    <a href="@Model.Movie.TrailerUrl" class="play-video">
+                        <i class="fa fa-play"></i>
+                    </a>
+                </div>
+
+
+                <div class="movie-details">
+                    <h3 class="title">@Model.Movie.Name</h3>
+
+                    <ul class="movie-subtext">
+                        <li>PG-13</li>
+                        <li>2h 32min</li>
+                        <li class="fw-bold">@Model.Movie.Category.Name</li>
+                        <li>@Model.Movie.StartDate</li>
+                    </ul>
+
+                    <a href="@Model.Movie.TrailerUrl" class="btn btn-main btn-effect">trailer</a>
+                    <a href="#" class="btn btn-main btn-effect"> @Model.Movie.Price LE</a>
+                    <a href="#" class="btn rate-movie"><i class="icon-heart"></i></a>
+
+                    <div class="rating mt10">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <span>296 Ratings</span>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =============== End OF MOVIE DETAIL INTRO 2 =============== -->
+<!-- =============== START OF MOVIE DETAIL MAIN SECTION =============== -->
+<section class="movie-detail-main ptb100">
+    <div class="container">
+
+        <div class="row">
+            <!-- Start of Movie Main -->
+            <div class="col-lg-8 col-sm-12">
+                <div class="inner pr50">
+
+                    <!-- Storyline -->
+                    <div class="storyline">
+                        <h3 class="title">Storyline</h3>
+
+                        <p>
+                            @Model.Movie.Description
+                        </p>
+                    </div>
+
+                    <!-- Media -->
+                    <div class="movie-media mt50">
+                        <h3 class="title"> Photos & Videos</h3>
+
+                        <ul class="image-gallery isotope">
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-1.jpg">
+                                    <img src="~/images/blog/bloglist-1.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-2.jpg">
+                                    <img src="~/images/blog/bloglist-2.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/other/home2-bg.jpg">
+                                    <img src="~/images/other/home2-bg.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-2.jpg">
+                                    <img src="~/images/blog/bloglist-2.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-1.jpg">
+                                    <img src="~/images/blog/bloglist-1.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-3.jpg">
+                                    <img src="~/images/blog/bloglist-3.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/blog/bloglist-1.jpg">
+                                    <img src="~/images/blog/bloglist-1.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/other/landscape.jpg">
+                                    <img src="~/images/other/landscape.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+
+                            <li class="element">
+                                <a href="~/images/other/home2-bg.jpg">
+                                    <img src="~/images/other/home2-bg.jpg" class="img-responsive" alt="">
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- End of Movie Main -->
+            <!-- Start of Sidebar -->
+            <div class="col-lg-4 col-sm-12">
+                <div class="sidebar">
+
+                    <!-- Start of Details Widget -->
+                    <aside class="widget widget-movie-details">
+                        <h3 class="title">Details</h3>
+
+                        <ul>
+                            <li><strong>Start Date: </strong> @Model.Movie.StartDate </li>
+                            <li><strong>End Date: </strong> @Model.Movie.EndDate </li>
+                            <li><strong>Budget: </strong>200 million USD</li>
+                            <li><strong>Country: </strong>USA</li>
+                            <li>
+                                <strong>Status: </strong>
+                                @if (Model.Movie.MovieStatus == Eticket.Data.MovieStatus.Upcoming)
+                                {
+                                    <span class="text-danger">Not Started</span>
+                                }
+                                else if (Model.Movie.MovieStatus == Eticket.Data.MovieStatus.Available)
+                                {
+                                    <span class="text-warning"> Available </span>
+                                }
+                                else if (Model.Movie.MovieStatus == Eticket.Data.MovieStatus.Expired)
+                                {
+                                    <span class="text-success">Completed</span>
+                                }
+                            </li>
+                        </ul>
+                    </aside>
+                    <!-- End of Details Widget -->
+                    <!-- Start of Details Widget -->
+                    <aside class="widget widget-movie-cast">
+                        <h3 class="title">Cast</h3>
+
+                        <ul class="cast-wrapper">
+                            @foreach (var actorMovie in Model.Movie.ActorMovies)
+                            {
+
+                                <li>
+                                    <a href="/actor/details/@actorMovie.Actor.Id">
+                                        <span class="circle-img">
+                                            <img src="~/images/cast/@actorMovie.Actor.ProfilePicture" alt="">
+                                        </span>
+                                        <h6 class="name">@actorMovie.Actor.FirstName @actorMovie.Actor.LastName </h6>
+                                    </a>
+                                </li>
+                            }
+
+                        </ul>
+
+
+                    </aside>
+                    <!-- End of Details Widget -->
+
+                </div>
+            </div>
+            <!-- End of Sidebar -->
+        </div>
+
+    </div>
+</section>
+<!-- =============== END OF MOVIE DETAIL MAIN SECTION =============== -->
+<!-- =============== START OF RECOMMENDED MOVIES SECTION =============== -->
+<section class="recommended-movies bg-light ptb100">
+    <div class="container">
+
+        <!-- Start of row -->
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <h2 class="title">People who liked this also liked...</h2>
+            </div>
+        </div>
+        <!-- End of row -->
+        <!-- Start of Latest Movies Slider -->
+        <div class="owl-carousel recommended-slider mt20">
+            @foreach (var movie in Model.RecommendedMovies)
+            {
+                <div class="item">
+                    <div class="movie-box-1">
+                        <div class="poster">
+                            <img src="~/images/movies/@movie.ImageUrl" alt="">
+                        </div>
+                        <div class="buttons">
+                            <a href="@movie.TrailerUrl" class="play-video">
+                                <i class="fa fa-play"></i>
+                            </a>
+                        </div>
+                        <div class="movie-details">
+                            <h4 class="movie-title">
+                                <a href="/movie/details/@movie.Id">@movie.Name</a>
+                            </h4>
+
+                            <span class="fw-bold text-white fs-4">@movie.Category.Name</span>
+
+                            <span class="released">@movie.StartDate.ToString("dd MMM yyyy")</span>
+                        </div>
+                        <div class="stars">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                            <span>8.7 / 10</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+
+
+    </div>
+    <!-- End of Latest Movies Slider -->
+
+</section>
+<!-- =============== END OF RECOMMENDED MOVIES SECTION =============== -->

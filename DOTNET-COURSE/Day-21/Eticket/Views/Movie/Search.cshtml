@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Eticket.Models.Movie>
+
+<!-- =============== START OF PAGE HEADER =============== -->
+<section class="page-header overlay-gradient" style="background: url(~/images/posters/movie-collection.jpg);">
+    <div class="container">
+        <div class="inner">
+            <h2 class="title">Search Results</h2>
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Search Results</li>
+            </ol>
+        </div>
+    </div>
+</section>
+<!-- =============== END OF PAGE HEADER =============== -->
+<!-- =============== START OF MAIN =============== -->
+<main class="bg-light ptb100">
+    <div class="container">
+        <div class="row">
+            @if (!Model.Any())
+            {
+                <p>No movies found matching your search criteria.</p>
+            }
+            else
+            {
+                @foreach (var movie in Model)
+                {
+                    <!-- Movie List Item -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="movie-box-3 mb30">
+                            <div class="listing-container">
+
+                                <!-- Movie List Image -->
+                                <div class="listing-image">
+                                    <!-- Image -->
+                                    <img src="~/images/movies/@movie.ImageUrl" alt="">
+                                </div>
+
+                                <!-- Movie List Content -->
+                                <div class="listing-content">
+                                    <div class="inner">
+
+                                        <!-- Play Button -->
+                                        <div class="play-btn">
+                                            <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                        </div>
+
+                                        <h2 class="title">
+                                            @movie.Name
+                                        </h2>
+
+                                        <!-- Rating -->
+                                        <div class="stars">
+                                            <div class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <span>7.5/10</span>
+                                                <span class="category">
+                                                    @(movie.Category != null ? movie.Category.Name : "No Category")
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <p>
+                                            @movie.Description
+                                        </p>
+
+                                        <a href="/movie/details/@movie.Id" class="btn btn-main btn-effect">details</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <!-- End of Movie List -->
+    </div>
+</main>
+<!-- =============== END OF MAIN =============== -->

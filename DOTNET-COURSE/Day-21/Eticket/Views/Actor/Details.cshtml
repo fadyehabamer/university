@@ -1,0 +1,67 @@
+﻿
+<style>
+    .celeb-detail-intro {
+        min-height:20rem;
+    }
+</style>
+
+<!-- =============== START OF MOVIE DETAIL INTRO =============== -->
+<section class="celeb-detail-intro overlay-gradient ptb100" style="background: url(assets/images/other/actor-img.jpg);">
+</section>
+<!-- =============== END OF MOVIE DETAIL INTRO =============== -->
+<!-- =============== START OF CELEBRITY DETAIL =============== -->
+<section class="celeb-detail pb100">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 col-12">
+                <div class="celeb-img" style="border-radius:20px">
+                    <img src="~/images/cast/@Model.ProfilePicture" alt="" style="border-radius:20px">
+                </div>
+            </div>
+
+
+            <div class="col-lg-8 col-12">
+                <div class="celeb-details pl-3">
+                    <h3 class="title">@Model.FirstName @Model.LastName</h3>
+                    <span class="profession">Actor</span>
+
+                    <!-- tab links -->
+                    <ul class="nav tab-links">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" aria-controls="bio" aria-expanded="false">biography</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="film-tab" data-toggle="tab" href="#filmography" aria-controls="filmography" aria-expanded="false">filmography</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content mt70">
+
+                        <div class="tab-pane fade active show" id="bio" role="tabpanel" aria-labelledby="bio-tab" aria-expanded="false">
+                            <div class="bio-description">
+                                <p>
+                                    @Model.Bio
+                                </p>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="tab-pane fade" id="filmography" role="tabpanel" aria-labelledby="film-tab" aria-expanded="false">
+                            <ul class="film-list">
+                                @foreach (var actorMovie in Model.ActorMovies)
+                                {
+                                    <li><a href="@Url.Action("Details", "Movie", new { id = actorMovie.Movie.Id })">@actorMovie.Movie.Name</a><span class="year">@actorMovie.Movie.StartDate.Year</span></li>
+                                }
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =============== End OF CELEBRITY DETAIL =============== -->

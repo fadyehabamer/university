@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Eticket.Models.Cinema>
+
+<style>
+    .listing-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-top: 20px;
+    }
+</style>
+
+<!-- =============== START OF PAGE HEADER =============== -->
+<section class="page-header overlay-gradient" style="background: url(assets/images/posters/movie-collection.jpg);">
+    <div class="container">
+        <div class="inner">
+            <h2 class="title">
+                Cinemas
+            </h2>
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li>Cinemas List </li>
+            </ol>
+        </div>
+    </div>
+</section>
+<!-- =============== END OF PAGE HEADER =============== -->
+<!-- =============== START OF MAIN =============== -->
+<main class="ptb100">
+    <div class="container">
+
+       
+        <!-- Start of Movie List -->
+        <div class="row">
+
+            @foreach (var cinema in Model)
+            {
+                <!-- Movie List Item -->
+                <div class="col-md-12 col-sm-12">
+                    <div class="movie-list-2">
+                    <div class="listing-container">
+
+                        <!-- Movie List Image -->
+                        <div class="listing-image">
+
+                            <!-- Image -->
+                            <div class="img-wrapper">
+
+
+                                <img src="~/images/posters/poster-1.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Movie List Content -->
+                        <div class="listing-content">
+                            <div class="inner">
+                                <h2 class="title">
+                                    @cinema.Name
+                                </h2>
+
+                                <p>
+                                    @cinema.Description
+                                </p>
+
+                                <a href="/cinema/details/@cinema.Id" class="btn btn-main btn-effect">details</a>
+                            </div>
+
+
+                            <!-- Buttons -->
+                            <div class="buttons">
+                                <a href="#" data-original-title="Location" data-toggle="tooltip" data-placement="bottom">
+                                    @cinema.Address
+                                </a>
+                            </div>
+
+                            <!-- Rating -->
+                            <div class="stars">
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            }
+          
+
+        </div>
+        <!-- End of Movie List -->
+       
+
+    </div>
+</main>
+<!-- =============== END OF MAIN =============== -->

@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1 class="zerone"> ZerOne Quiz </h1>
+    <h3> subject name </h3>
+    <div class="quiz-wrapper">
+        <div class="title">
+            <h4> Question <span class="question-num-value"> </span> / <span class="question-total-value"> </span> </h4>
+            <hr>
+        </div>
+        <div class="question">
+
+        </div>
+
+        <div class="options">
+            <li id="0" class="option1" onclick="check(this)  "> </li>
+            <li id="1" class="option2" onclick="check(this)  "> </li>
+            <li id="2" class="option3" onclick="check(this)  "> </li>
+            <li id="3" class="option4" onclick="check(this)  "> </li>
+        </div>
+
+        <div class="score">
+            <div class="next btn " id="next">
+                <button type="button" onclick="next()"> next </button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="quiz-over">
+        <div class="box">
+            <h1 class="good">You answered <br> <span class="correct-answers"></span> / <span class="total-answers">
+                </span> <br>
+                that is
+                <span class="percentage"></span>% </h1>
+
+
+
+            <div class="meme">
+                <div class="full"><img src="images/100.jpg" alt="">
+                    <h2>💃💃💃💃💃💃💃💃💃💃💃💃</h2>
+                </div>
+                <div class="eighty"><img src="images/80.jpg" alt="">
+                    <h2> 😘😘 اشطا حلو </h2>
+                </div>
+                <div class="sixty"><img src="images/60.jpg" alt="">
+                    <h2>🙄🙄🙄🙄🙄ما تشد حيلك شويه </h2>
+                </div>
+                <div class="forty"><img src="images/40.jpg" alt="">
+                    <h2>😑😑😑هو اي ده </h2>
+                </div>
+                <div class="twenty"><img src="images/20.jpeg" alt="">
+                    <h2>🤷‍♂🤷‍♂️عايز ايه حضرتك؟</h2>
+                </div>
+                <div class="zero"><img src="images/0.jpeg" alt="">
+                    <h2>🙃🙃 هل انت معانا في الكليه
+                    </h2>
+                </div>
+            </div>
+
+            <button class="try" type="button" onclick="tryagain()">Try Again</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

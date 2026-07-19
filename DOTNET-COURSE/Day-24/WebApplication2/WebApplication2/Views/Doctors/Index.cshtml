@@ -1,0 +1,179 @@
+﻿<!-- ==========Page Header Section Start Here========== -->
+<section class="page-header-section service-title style-1"
+         style="background-image: url('@Url.Content("~/images/pageheader/pageheader.jpg")')">
+    <div class="page-header-content">
+        <div class="container">
+            <div class="page-header-content-inner">
+                <div class="page-title">
+                    <h2>Our Professional Team</h2>
+                </div>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Doctors</li>
+                </ol>
+
+                <a href="Doctors/CreateNewDoctor"
+                    class="btn btn-primary w-100 text-white"
+                >
+                    Create New Doctor    
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==========Page Header Section Ends Here========== -->
+<!-- ==========Doctor Section Start Here========== -->
+<section class="doctor-section style-2 padding-tb">
+    <div class="container">
+        <div class="section-header wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+            <h2><span>Meet Our</span></h2>
+            <h2>Mukti Professional Doctors</h2>
+        </div>
+        <div class="section-wrapper">
+            <div class="row justify-content-center">
+                @foreach (var item in Model)
+                {
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-3">
+                        <div class="doctor-item style-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                            <div class="doctor-inner">
+                                <div class="doctor-thumb">
+                                    <img src="~/images/team/01.jpg" alt="doctor">
+                                </div>
+                                <div class="doctor-content">
+                                    <div class="doctor-name">
+                                        <h4><a href="Doctors/details/@item.Id">Dr. @item.Name</a></h4>
+                                        <p class="digi">@item.Specialization</p>
+                                    </div>
+                                    <div class="">
+
+                                        <a href="Doctors/MakeAppointment/@item.Id" class="btn btn-primary text-white d-block mb-2">
+                                            Make an Appointment
+                                        </a>
+
+                                        <a href="Doctors/EditDoctor/@item.Id" class="btn btn-outline-primary d-block text-primary mb-2">
+                                            Edit Doctor
+                                        </a>
+
+
+                                        <a href="Doctors/DeleteDoctor/@item.Id" class="btn btn-danger text-white d-block" class="delete-doctorBtn">
+                                            Delete Doctor
+                                        </a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==========Doctor Section Ends Here========== -->
+<!-- ==========Certificate Section Start Here========== -->
+<section class="certificat-section padding-tb">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="certificate-content">
+                    <h2><span>Diplomas And Сertificates </span></h2>
+                    <h2>Of Our Professional Doctors</h2>
+                    <p>
+                        It is along establshed fact that areader will bef distracted the readabe conten the point
+                        inof using lorem ipsum is that has more orless normal distrbutions it along establshed
+                        fact that areader will be distracted the readabe contiente the point inof using lorem ipsum
+                        is that has more orless normal distrbution conten here making it look like readable
+                        english.
+                    </p>
+                    <a href="#" class="lab-btn">
+                        <span>
+                            Visit Our Website <i class="icofont-double-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="certificats-site">
+                    <div class="row no-gutters">
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="certificate-item-inner">
+                                <div class="certificate-thumb">
+                                    <img src="~/images/certificat/01.jpg" alt="certificat">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="certificate-item-inner">
+                                <div class="certificate-thumb">
+                                    <img src="~/images/certificat/02.jpg" alt="certificat">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="certificate-item-inner">
+                                <div class="certificate-thumb">
+                                    <img src="~/images/certificat/03.jpg" alt="certificat">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="certificate-item-inner">
+                                <div class="certificate-thumb">
+                                    <img src="~/images/certificat/04.jpg" alt="certificat">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==========Certificate Section Ends Here========== -->
+<!-- ==========Sponsor Section Start Here========== -->
+<div class="sponsor-section">
+    <div class="container">
+        <div class="sponsor-area">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/1.png" alt="sponso-img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/2.png" alt="sponso-img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/3.png" alt="sponso-img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/4.png" alt="sponso-img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/5.png" alt="sponso-img">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sponsor-thumb">
+                        <img src="~/images/sponsor/6.png" alt="sponso-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ==========Sponsor Section Ends Here========== -->
+
+
+
