@@ -29,7 +29,8 @@ namespace WebApplication1
                         builder.WithOrigins("*")
                                             .AllowAnyHeader()
                                             .AllowAnyMethod();
-                    }););
+                    });
+            });
 
 
 

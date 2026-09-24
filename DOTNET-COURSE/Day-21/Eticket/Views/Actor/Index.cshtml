@@ -15,7 +15,7 @@
     }
 </style>
 <!-- =============== START OF PAGE HEADER =============== -->
-<section class="page-header overlay-gradient" style="background: url(~/images/posters/movie-collection.jpg);">
+<section class="page-header overlay-gradient" style="background: url(@Url.Content("~/images/posters/movie-collection.jpg"));">
     <div class="container">
         <div class="inner">
             <h2 class="title">Actors </h2>
@@ -45,7 +45,7 @@
                             <!-- Celebrity Image -->
                             <div class="celebrity-image">
                                 <a href="/actor/details/@actor.Id">
-                                    <img src="~/images/cast/@actor.ProfilePicture" alt="">
+                                    <img src="~/images/cast/@actor.ProfilePicture" alt="@actor.FirstName @actor.LastName">
                                 </a>
                             </div>
 

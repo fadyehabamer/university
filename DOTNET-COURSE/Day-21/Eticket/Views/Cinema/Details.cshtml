@@ -4,7 +4,7 @@
     }
 </style>
    <!-- =============== START OF MOVIE DETAIL INTRO =============== -->
-<section class="movie-detail-intro overlay-gradient ptb100" style="background: url(~/images/other/movie-detail-bg.jpg);">
+<section class="movie-detail-intro overlay-gradient ptb100" style="background: url(@Url.Content("~/images/other/movie-detail-bg.jpg"));">
     <div class="container">
 
         <div class="movie-details">
@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
+        <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video" aria-label="Play trailer">
             <i class="fa fa-play"></i>
         </a>
 
@@ -147,7 +147,7 @@
                         <!-- End of Poster -->
                         <!-- Start of Buttons -->
                         <div class="buttons">
-                            <a href="@movie.TrailerUrl" class="play-video">
+                            <a href="@movie.TrailerUrl" class="play-video" aria-label="Play trailer">
                                 <i class="fa fa-play"></i>
                             </a>
                         </div>

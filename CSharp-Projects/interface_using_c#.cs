@@ -80,8 +80,9 @@ namespace ConsoleApplication42
     {
         static void Main(string[] args)
         {
-            customer c1 = new customer();
-            customer2 c2 = new customer2();
+            // interfaces cannot be instantiated directly; use a class that implements them
+            customer c1 = new person();
+            customer2 c2 = new tree();
         }
     }
 }

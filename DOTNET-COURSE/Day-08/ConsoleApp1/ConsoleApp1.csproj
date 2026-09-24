@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <!-- ConsoleApp1/ holds a nested copy of this project; keep it out of this build -->
+    <Compile Remove="ConsoleApp1\**" />
+    <None Remove="ConsoleApp1\**" />
+  </ItemGroup>
+
 </Project>

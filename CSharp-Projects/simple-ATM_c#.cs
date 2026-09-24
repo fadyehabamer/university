@@ -16,6 +16,7 @@ namespace ATM
             int password = int.Parse(Console.ReadLine());
             if (password == 1111)
             {
+                int balance = 500; // declared before label a so the balance persists when the user redoes an operation
             a:
                 Console.WriteLine("access verified\n");
                 Console.WriteLine("1-Check the Balance\n");
@@ -25,7 +26,6 @@ namespace ATM
                 Console.WriteLine("\n");
                 Console.WriteLine("Enter your option: ");
                 int option = int.Parse(Console.ReadLine());
-                int balance = 500;
                 switch (option)
                 {case 1: Console.WriteLine("your balance is " + balance);
                         break;

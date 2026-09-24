@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <!-- twoSum/ holds a nested copy of this project; keep it out of this build -->
+    <Compile Remove="twoSum\**" />
+    <None Remove="twoSum\**" />
+  </ItemGroup>
+
 </Project>

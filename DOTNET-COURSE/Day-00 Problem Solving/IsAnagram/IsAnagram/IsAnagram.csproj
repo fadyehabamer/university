@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <!-- IsAnagram/ holds a nested copy of this project; keep it out of this build -->
+    <Compile Remove="IsAnagram\**" />
+    <None Remove="IsAnagram\**" />
+  </ItemGroup>
+
 </Project>

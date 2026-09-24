@@ -198,6 +198,14 @@ Author URI: gnodesign.com
         search_close.on( 'click', function(){
             general_searchform.removeClass('open');
         });
+
+        // the close control is a <span>: support Enter/Space for keyboard users
+        search_close.on( 'keydown', function(e){
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                general_searchform.removeClass('open');
+            }
+        });
         
         
         

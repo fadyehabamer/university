@@ -94,6 +94,8 @@ function randomquestion() {
 
 
 function check(element) {
+  // ignore repeat answers (keyboard users can still reach disabled options)
+  if (element.classList.contains("disabled")) return;
   if (element.id == questions[questionindex].a) {
     element.classList.add("correct");
     score++;
@@ -163,6 +165,16 @@ function quizover() {
 
 function tryagain() {
   window.location.reload();
+}
+
+// let keyboard users pick an option with Enter or Space
+for (let i = 0; i < options.length; i++) {
+  options[i].addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      check(this);
+    }
+  });
 }
 
 window.onload = function () {
