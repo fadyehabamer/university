@@ -6,9 +6,9 @@
 
 Bio Informatics Lecture Notes @ Faculty of computer and information Sciences ' MU '  for the '4th Year' IT Department.
 
-## 🛠 Built With
+## 🛠 Contents
 
-_Static HTML/CSS._
+Lecture notes as PDF files (no code to build or run).
 
 ## 📁 Files
 
@@ -20,12 +20,12 @@ Pairwise Algorithm 02.pdf
 repoAssets/
 ```
 
-## ▶️ Run Locally
+## ▶️ View Locally
 
 ```bash
 git clone https://github.com/fadyehabamer/university.git
 cd university/BioInformatics-SandBox
-# then open index.html in your browser
+# then open any of the PDF files in a PDF viewer
 ```
 
 **Topics:** `needleman-wunsch-algorithm` `pairwise-alignment` `smith-waterman-algorithm` `multiple-sequence-alignment` `sumofpairs` `star-algorithm`
