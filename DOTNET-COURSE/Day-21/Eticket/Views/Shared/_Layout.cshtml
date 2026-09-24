@@ -5,11 +5,11 @@
 
     <!-- ===== Mobile viewport optimized ===== -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
     <!-- ===== Website Title ===== -->
-    <title>Movify - Movies, Series & Cinema HTML Template</title>
+    <title>@(ViewData["Title"] is string pageTitle ? pageTitle + " - Eticket" : "Eticket")</title>
 
     <!-- ===== Favicon & Different size apple touch icons ===== -->
     <link rel="shortcut icon" href="~/images/favicon.png" type="image/x-icon">
@@ -75,9 +75,9 @@
                     </a>
 
                     <!-- Login Button on Responsive -->
-                    <a href="#login-register-popup" class="login-mobile-btn popup-with-zoom-anim"><i class="icon-user"></i></a>
+                    <a href="#login-register-popup" class="login-mobile-btn popup-with-zoom-anim" aria-label="Login or register"><i class="icon-user"></i></a>
 
-                    <button id="mobile-nav-toggler" class="hamburger hamburger--collapse" type="button">
+                    <button id="mobile-nav-toggler" class="hamburger hamburger--collapse" type="button" aria-label="Toggle navigation">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
                         </span>
@@ -126,14 +126,14 @@
 
                             <!-- Menu Item -->
                             <li class="nav-item">
-                                <a class="nav-link toggle-search" href="#">
+                                <a class="nav-link toggle-search" href="#" aria-label="Search">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </li>
 
                             <!-- Menu Item -->
                             <li class="nav-item notification-wrapper">
-                                <a class="nav-link notification" href="#">
+                                <a class="nav-link notification" href="#" aria-label="Notifications">
                                     <i class="fa fa-globe"></i>
                                     <span class="notification-count">2</span>
                                 </a>
@@ -218,7 +218,7 @@
                                 <ul class="social-btns">
                                     <!-- Social Media -->
                                     <li>
-                                        <a href="#" class="social-btn-roll facebook">
+                                        <a href="#" class="social-btn-roll facebook" aria-label="Facebook">
                                             <div class="social-btn-roll-icons">
                                                 <i class="social-btn-roll-icon fa fa-facebook"></i>
                                                 <i class="social-btn-roll-icon fa fa-facebook"></i>
@@ -228,7 +228,7 @@
 
                                     <!-- Social Media -->
                                     <li>
-                                        <a href="#" class="social-btn-roll twitter">
+                                        <a href="#" class="social-btn-roll twitter" aria-label="Twitter">
                                             <div class="social-btn-roll-icons">
                                                 <i class="social-btn-roll-icon fa fa-twitter"></i>
                                                 <i class="social-btn-roll-icon fa fa-twitter"></i>
@@ -238,7 +238,7 @@
 
                                     <!-- Social Media -->
                                     <li>
-                                        <a href="#" class="social-btn-roll google-plus">
+                                        <a href="#" class="social-btn-roll google-plus" aria-label="Google+">
                                             <div class="social-btn-roll-icons">
                                                 <i class="social-btn-roll-icon fa fa-google-plus"></i>
                                                 <i class="social-btn-roll-icon fa fa-google-plus"></i>
@@ -248,7 +248,7 @@
 
                                     <!-- Social Media -->
                                     <li>
-                                        <a href="#" class="social-btn-roll instagram">
+                                        <a href="#" class="social-btn-roll instagram" aria-label="Instagram">
                                             <div class="social-btn-roll-icons">
                                                 <i class="social-btn-roll-icon fa fa-instagram"></i>
                                                 <i class="social-btn-roll-icon fa fa-instagram"></i>
@@ -299,7 +299,7 @@
     <div class="general-search-wrapper">
         <form class="general-search" role="search" method="get" action="/Movie/Search">
             <input class="form-control mr-sm-2" type="search" name="query" placeholder="Search for movies..." aria-label="Search">
-            <span id="general-search-close" class="ti-close toggle-search"></span>
+            <span id="general-search-close" class="ti-close toggle-search" role="button" tabindex="0" aria-label="Close search"></span>
         </form>
     </div>
     <!-- =============== END OF GENERAL SEARCH WRAPPER =============== -->
@@ -435,7 +435,7 @@
     <!-- =============== END OF LOGIN & REGISTER POPUP =============== -->
     <!-- ===== Start of Back to Top Button ===== -->
     <div id="backtotop">
-        <a href="#"></a>
+        <a href="#" aria-label="Back to top"></a>
     </div>
 
     <!-- ===== All Javascript at the bottom of the page for faster page loading ===== -->

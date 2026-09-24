@@ -18,3 +18,15 @@
 @import "sub-stylesheet/_footer";
 
 // Components
+
+/* Accessibility: this template removes focus outlines (outline: none) in many
+   places; restore a visible indicator for keyboard users only. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #0071ef !important;
+  outline-offset: 2px;
+}

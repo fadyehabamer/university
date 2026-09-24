@@ -144,7 +144,7 @@
 
                                 &::before {
                                     @extend %abs;
-                                    content: url(../../assets/images/blog/icon/b-code.png);
+                                    content: url(../images/blog/icon/b-code.png);
                                     left: 50%;
                                     top: 7px;
                                     transform: translateX(-50%);

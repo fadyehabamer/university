@@ -8,6 +8,13 @@
     $(document).ready(function () {
 
         /*=========Mobile menu start ============*/
+        // .open-menu is a <div>: let keyboard users open the menu with Enter/Space
+        $('.open-menu').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
         $('#mobile-nav').hcOffcanvasNav({
             position: 'right',
             height: 500,

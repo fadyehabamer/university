@@ -8,7 +8,9 @@ My Journey learning BackEnd Web Development using C# & .Net Framework. It demons
 
 ## 🛠 Built With
 
-**Languages:** CSS · Sass · JavaScript
+**Languages:** C# · SQL · CSS · Sass · JavaScript
+
+**Frameworks:** .NET 7/8 console apps, ASP.NET Core MVC & Razor Pages, Entity Framework Core (SQL Server)
 
 **Libraries / tools:** `Bootstrap`, `jQuery`, `Swiper`, `Font Awesome`, `Animate.css`, `WOW.js`
 
@@ -51,6 +53,12 @@ Day-21/
 Day-22/
 Day-23/
 Day-24/
+Day-25/
+Day-26/
+Day-27/
+Day-28/
+Day-29/
+Day-30/
 ```
 
 ## ▶️ Run Locally
@@ -58,7 +66,10 @@ Day-24/
 ```bash
 git clone https://github.com/fadyehabamer/university.git
 cd university/DOTNET-COURSE
-# then open index.html in your browser
+# each Day-XX folder holds its own .sln / .csproj (requires the .NET SDK), e.g.
+dotnet run --project "Day-01/DayOneTask/DayOneTask/DayOneTask.csproj"
+# the web apps (Day-19 onwards) expect a local SQL Server; adjust the
+# ConnectionStrings in appsettings.json before running them
 ```
 
 ---

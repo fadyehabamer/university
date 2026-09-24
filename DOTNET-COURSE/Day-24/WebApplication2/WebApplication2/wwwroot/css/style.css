@@ -2212,7 +2212,7 @@ select {
   height: 50%;
   top: 0;
   left: 0;
-  background: url(../../assets/images/apport/01.jpg);
+  background: url(../images/apport/01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -2227,7 +2227,7 @@ select {
   height: 50%;
   bottom: 0;
   right: 0;
-  background: url(../../assets/images/apport/02.jpg);
+  background: url(../images/apport/02.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -2384,7 +2384,7 @@ select {
 /*@@@@@@@@@@@@@@  Testimonial Section Start Here  @@@@@@@@@@@@@@@@@*/
 .testimonial-section.style-1 {
   padding-bottom: 95px;
-  background: url(../../assets/images/testimonial/bg.jpg);
+  background: url(../images/testimonial/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2536,7 +2536,7 @@ select {
   }
 }
 .blog-section .main-blog .blog-wrapper .service-item .service-item-inner .service-content blockquote p::before {
-  content: url(../../assets/images/blog/icon/b-code.png);
+  content: url(../images/blog/icon/b-code.png);
   position: absolute;
   left: 50%;
   top: 7px;
@@ -2982,7 +2982,7 @@ select {
 }
 /* @@@@@@@@@@@@@  Certificate Section Start Here  @@@@@@@@@@@@@@ */
 .certificat-section {
-  background: url(../../assets/images/certificat/bg.jpg);
+  background: url(../images/certificat/bg.jpg);
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -4197,7 +4197,7 @@ select {
   }
 }
 .blog-section .main-blog .blog-wrapper .post-item .post-item-inner .post-content blockquote p::before {
-  content: url(../../assets/images/blog/icon/b-code.png);
+  content: url(../images/blog/icon/b-code.png);
   left: 50%;
   top: 7px;
   transform: translateX(-50%);
@@ -4633,7 +4633,7 @@ select {
 
 /* @@@@@@@@@@@@@  Footer Section Start Here  @@@@@@@@@@@@@@ */
 .footer-section.style-1 .footer-top {
-  background: url(../../assets/images/footer/bg1.png);
+  background: url(../images/footer/bg1.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -4751,6 +4751,18 @@ select {
 }
 .footer-section.style-1 .footer-bottom span a:first-child {
   color: #0071ef;
+}
+
+/* Accessibility: this template removes focus outlines (outline: none) in many
+   places; restore a visible indicator for keyboard users only. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #0071ef !important;
+  outline-offset: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */

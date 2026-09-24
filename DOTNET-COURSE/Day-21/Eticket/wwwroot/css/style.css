@@ -5244,3 +5244,15 @@ main .col-md-12:last-of-type .movie-list-2 {
     float: right;
     opacity: .7;
 }
+
+/* Accessibility: this template removes focus outlines (outline: none) in many
+   places; restore a visible indicator for keyboard users only. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #ff4d7e !important;
+  outline-offset: 2px;
+}

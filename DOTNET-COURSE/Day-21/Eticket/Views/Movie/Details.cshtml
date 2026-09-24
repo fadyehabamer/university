@@ -1,7 +1,7 @@
 ﻿@model Eticket.ViewModels.MovieDetailsVM
 
 <!-- =============== START OF MOVIE DETAIL INTRO =============== -->
-<section class="movie-detail-intro overlay-gradient ptb100" style="background: url(~/images/other/movie-detail-bg.jpg); min-height:22rem;">
+<section class="movie-detail-intro overlay-gradient ptb100" style="background: url(@Url.Content("~/images/other/movie-detail-bg.jpg")); min-height:22rem;">
 </section>
 <!-- =============== END OF MOVIE DETAIL INTRO =============== -->
 <!-- =============== START OF MOVIE DETAIL INTRO 2 =============== -->
@@ -13,7 +13,7 @@
                 <div class="movie-poster" style="max-width:18rem">
                     <img src="~/images/movies/@Model.Movie.ImageUrl" alt="">
 
-                    <a href="@Model.Movie.TrailerUrl" class="play-video">
+                    <a href="@Model.Movie.TrailerUrl" class="play-video" aria-label="Play trailer">
                         <i class="fa fa-play"></i>
                     </a>
                 </div>
@@ -31,7 +31,7 @@
 
                     <a href="@Model.Movie.TrailerUrl" class="btn btn-main btn-effect">trailer</a>
                     <a href="#" class="btn btn-main btn-effect"> @Model.Movie.Price LE</a>
-                    <a href="#" class="btn rate-movie"><i class="icon-heart"></i></a>
+                    <a href="#" class="btn rate-movie" aria-label="Add to favourites"><i class="icon-heart"></i></a>
 
                     <div class="rating mt10">
                         <i class="fa fa-star"></i>
@@ -217,7 +217,7 @@
                             <img src="~/images/movies/@movie.ImageUrl" alt="">
                         </div>
                         <div class="buttons">
-                            <a href="@movie.TrailerUrl" class="play-video">
+                            <a href="@movie.TrailerUrl" class="play-video" aria-label="Play trailer">
                                 <i class="fa fa-play"></i>
                             </a>
                         </div>
