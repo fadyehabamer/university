@@ -8,7 +8,7 @@
 
 ## 🛠 Built With
 
-_Static HTML/CSS._
+**Language:** C# (console applications)
 
 ## 📁 Files
 
@@ -24,7 +24,8 @@ simple_array_c#.cs
 ```bash
 git clone https://github.com/fadyehabamer/university.git
 cd university/CSharp-Projects
-# then open index.html in your browser
+# each .cs file is a standalone console program, e.g. with Mono:
+mcs "simple-ATM_c#.cs" -out:atm.exe && mono atm.exe
 ```
 
 **Topics:** `csharp` `college-project`
